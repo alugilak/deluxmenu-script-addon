@@ -1,0 +1,36 @@
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
+# 					Skritp bei SilentWolf und darf jederzeit geändert und weitergegeben werden. Bitte Ideegeber Therniau in dein Skript mit eingeben!										#
+# 																																															#
+#                             Dieses Skript ist eine Erweiterung für das Plugin DeluxeMenus https://www.spigotmc.org/resources/deluxemenus.11734/	                                        #
+#    Weitere benötigte PLugins: https://github.com/bensku/Skript/releases/download/dev32c/Skript.jar und https://www.spigotmc.org/resources/unofficial-skquery-fork-1-6-1-12.36631/			#
+#																																															#
+#Beispiel																																													#
+#[item1:] ist der Platzhalter für das Item [enchanted book] Verzaubertes Buch! <enchanted book> kann geändert werden.																		#
+#[item1-name] ist der Name des Items welches in die Aktionsleiste gelegt wird, hier wird das Verzauberte Buch als Teleporter Auswahl angezeigt! <&aTeleporter Auswahl> kann geändert werden.#
+#[item1-slot] ist der Slot Platz in der Aktionsleiste. 8 ist der letzte Slotplatz. <8> kann geändert werden																					#
+#Die Slot ID´s und deren Platz könnt ihr euch unter http://www.zauschcraft.de/Items_slot_number.png anschauen!																				#
+#[execute player command "teleportermenu"] ist der Befehl den ihr bei DeluxeMenus als Guimenübefehl festgelegt habt! ["teleportermenu"] 													#
+#																																															#
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
+
+options:
+
+	item1: enchanted book
+	item1-name: &aTeleporter Auswahl		
+	item1-slot: 8
+	item2: note block
+	shop-name: &aShop 	
+	shop-slot: 7
+								
+
+
+on join:	 
+	set slot {@item1-slot} of player to {@item1} named "{@item1-name}"
+	set slot {@item2-slot} of player to {@item2} named "{@item2-name}"
+	
+on right click with {@item1}:
+	wait 5 tick
+	execute player command "teleportermenu"
+on right click with {@item2}:	
+	wait 5 tick
+	execute player command "shopmenu"
