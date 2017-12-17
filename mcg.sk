@@ -94,6 +94,7 @@ options:
 	
 	guiitem: enchanted book
 	gui-name: &eMulti Command GUI
+	gui-lore: &4Zauschcraft Multi Command Gui
 	gui-slot: 8
 	gui-cmd: MCG
 #--------------------------------------------------------------------------Erstellen des Pluginordners und der Beispieldatei config.yml--------------------------------------------------------------------------------------------------------------------------------------#							
@@ -108,10 +109,31 @@ on load:
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 on join:	 
 	set slot {@gui-slot} of player to {@guiitem} named "{@gui-name}"
+	format slot {@gui-slot} of player with {@guiitem} named "{@gui-name}" with lore "{@gui-lore}" to be unstealable
 
 on right click with {@guiitem}:
 	wait 5 tick
 	open chest with 6 rows named "{@gui-name}" to player
+	format slot 0 of player with {@item0} named "{@item0-name}" with lore "{@item0-name}" to be unstealable
+	format slot 1 of player with {@item1} named "{@item1-name}" with lore "{@item1-name}" to be unstealable
+	format slot 3 of player with {@item3} named "{@item3-name}" with lore "{@item3-name}" to be unstealable	
+	format slot 4 of player with {@item4} named "{@item4-name}" with lore "{@item4-name}" to be unstealable
+	format slot 5 of player with {@item5} named "{@item5-name}" with lore "{@item5-name}" to be unstealable	
+	format slot 6 of player with {@item6} named "{@item6-name}" with lore "{@item6-name}" to be unstealable
+	format slot 7 of player with {@item7} named "{@item7-name}" with lore "{@item7-name}" to be unstealable
+	format slot 8 of player with {@item8} named "{@item8-name}" with lore "{@item8-name}" to be unstealable
+	format slot 9 of player with {@item9} named "{@item9-name}" with lore "{@item9-name}" to be unstealable
+	format slot 10 of player with {@item10} named "{@item10-name}" with lore "{@item10-name}" to be unstealable
+	format slot 11 of player with {@item11} named "{@item11-name}" with lore "{@item11-name}" to be unstealable
+	format slot 12 of player with {@item12} named "{@item12-name}" with lore "{@item12-name}" to be unstealable
+	format slot 13 of player with {@item13} named "{@item13-name}" with lore "{@item13-name}" to be unstealable	
+	format slot 14 of player with {@item14} named "{@item14-name}" with lore "{@item14-name}" to be unstealable
+	format slot 15 of player with {@item15} named "{@item15-name}" with lore "{@item15-name}" to be unstealable	
+	format slot 16 of player with {@item16} named "{@item16-name}" with lore "{@item16-name}" to be unstealable
+	format slot 17 of player with {@item17} named "{@item17-name}" with lore "{@item17-name}" to be unstealable	
+	format slot 18 of player with {@item18} named "{@item18-name}" with lore "{@item18-name}" to be unstealable
+	format slot 19 of player with {@item19} named "{@item19-name}" with lore "{@item19-name}" to be unstealable	
+	format slot 20 of player with {@item20} named "{@item20-name}" with lore "{@item20-name}" to be unstealable	
 	format slot 0 of player with {@item0} named "{@item0-name}" with lore "{@item0-name}" to close then run [execute player command "{@item0-cmd}"]
 	format slot 1 of player with {@item1} named "{@item1-name}" with lore "{@item1-name}" to close then run [execute player command "{@item1-cmd}"]
 	format slot 2 of player with {@item2} named "{@item2-name}" with lore "{@item2-name}" to close then run [execute player command "{@item2-cmd}"]
@@ -133,6 +155,7 @@ on right click with {@guiitem}:
 	format slot 18 of player with {@item18} named "{@item18-name}" with lore "{@item18-name}" to close then run [execute player command "{@item18-cmd}"]
 	format slot 19 of player with {@item19} named "{@item19-name}" with lore "{@item19-name}" to close then run [execute player command "{@item19-cmd}"]	
 	format slot 20 of player with {@item20} named "{@item20-name}" with lore "{@item20-name}" to close then run [execute player command "{@item20-cmd}"]
+	
 		
 command /mcgi [<text>]:
   trigger:    
