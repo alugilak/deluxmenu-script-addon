@@ -1,0 +1,23 @@
+﻿																																															
+                             Dieses Skript ist eine Erweiterung für das Plugin DeluxeMenus https://www.spigotmc.org/resources/deluxemenus.11734/	                                        
+Weitere benötigte Plugins: 
+
+https://github.com/bensku/Skript/releases/download/dev32c/Skript.jar 
+https://www.spigotmc.org/resources/unofficial-skquery-fork-1-6-1-12.36631/	
+https://github.com/tim740/skUtilities/releases/tag/v0.9.0 
+https://forums.skunity.com/resources/mundosk.69/	
+																																						
+Beispiel																																													
+Ab Version 1.2 wird ein Pluginordner dmaddon erstellt mit einer example.yml erstellt.
+In Zukunft sollen die Werte direkt aus dieser Datei geladen werden. Es sollte im nächsten Update funktionieren. Bis dahin bitte weiter die Änderungen
+in der dmaddon.sk Datei im scripts Ordner ändern! Achtet darauf, dass ihr ab sofort nurnoch die Werte hinter dem : ändert! 
+
+Beispiel
+
+itme0: enchanted book
+
+Hier nur noch enchanted book ändern! 
+
+Das Script erstellt nun 1 Guimenü mit 20 Guimenüitems, was vorerst ausreichen sollte.
+
+Desweiteren gibt es mit dem Consolenbefehl "/dmaddon" Infos über das Programm.
